@@ -4,6 +4,10 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class CalculatorService {
+    public String hello(){
+        return "Добро пожаловать в калькулятор";
+    }
+
     public String addition(Integer num1, Integer num2){
         if (num1 == null || num2 == null){
             return "Для корректного выполнения операции необходимо ввести два числа";
