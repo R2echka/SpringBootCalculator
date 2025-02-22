@@ -14,6 +14,11 @@ public class CalculatorController {
         this.calculatorService = calculatorService;
     }
 
+    @GetMapping(path="")
+    public String hello(){
+        return calculatorService.hello();
+    }
+
     @GetMapping(path="/plus")
     public String addition(@RequestParam(value="num1", required = false) Integer num1, @RequestParam(value="num2", required = false) Integer num2){
         return calculatorService.addition(num1, num2);
